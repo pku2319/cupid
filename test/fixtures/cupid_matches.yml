@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dater_id: 1
+  percent: 1
+
+two:
+  dater_id: 1
+  percent: 1

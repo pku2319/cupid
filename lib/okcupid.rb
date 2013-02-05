@@ -17,12 +17,12 @@ module Okcupid
   end
 
   def self.grab_match(agent, match_username)
-    agent.get("http://www.okcupid.com/profile/#{match_username}") do |page|
-      doc = Nokogiri::HTML(page.body)
-      match_text = doc.css('span.match').first.text
-
-      /\d\d/.match(match_text)[0]
-    end
+    page = agent.get("http://www.okcupid.com/profile/#{match_username}")
+    doc = Nokogiri::HTML(page.body)
+    match_text = doc.css('span.match').first.text
+    
+    #return match percent
+    /\d\d/.match(match_text)[0]
   end
 
 end

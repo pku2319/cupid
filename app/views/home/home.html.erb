@@ -1,0 +1,9 @@
+<%= form_for(Dater.new) do |f| %>
+  <%= f.label :first_name, "First Name"%>
+  <%= f.text_field :first_name %><br>
+  <%= f.label :cupid_name, "OkCupid Username"%>
+  <%= f.text_field :cupid_name %><br>
+  <%= f.label :cupid_pass, "OkCupid Password"%>
+  <%= f.password_field :cupid_pass %><br>
+  <%= f.submit %>
+<% end %>
